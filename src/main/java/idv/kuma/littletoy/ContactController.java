@@ -22,13 +22,14 @@ public class ContactController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String home(Map<String, Object> model){
+    public String home(Map<String, Object> model) {
         List<Contact> contacts = contactRepo.findAll();
         model.put("contacts", contacts);
         return "home";
     }
 
-    public String submit(Contact contact){
+    @RequestMapping(method = RequestMethod.POST)
+    public String submit(Contact contact) {
         contactRepo.save(contact);
         return "redirect:/";
     }
