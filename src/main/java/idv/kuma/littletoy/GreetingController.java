@@ -16,5 +16,10 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "greeting";
     }
+
+    @RequestMapping("/fixed")
+    public String fixed() {
+        return "fixed";
+    }
 }
 
