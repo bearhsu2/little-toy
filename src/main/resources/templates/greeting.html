@@ -1,18 +1,21 @@
-<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Spring Boot CLI + Javascript</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!--<script src="jquery-3.2.1.min.js"></script>-->
-    <script type="text/javascript">
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="semantic/semantic.min.js"></script>
+    <script>
         $(document).ready(function() {
             $('p').animate({
                 fontSize: '48px'
             }, "slow");
         });
     </script>
+
 </head>
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
 </body>
 </html>
+

@@ -1,3 +1,8 @@
 management:
   security:
     enabled: false
+
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
