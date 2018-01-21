@@ -21,5 +21,10 @@ public class GreetingController {
     public String fixed() {
         return "fixed";
     }
+
+    @RequestMapping("/members")
+    public String members() {
+        return "members";
+    }
 }
 

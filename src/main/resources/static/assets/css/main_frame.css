@@ -1,4 +1,5 @@
  body {
+    margin-top: 7em;
     background-color: #FFFFFF;
   }
   .ui.menu .item img.logo {
@@ -9,6 +10,8 @@
   }
   .wireframe {
     margin-top: 2em;
+    width: 100%;
+    z-index: 0;
   }
   .ui.footer.segment {
     margin: 5em 0em 0em;
