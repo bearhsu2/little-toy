@@ -1,0 +1,27 @@
+<div class="ui stackable two column grid">
+    <div class="column">
+        <div id="pie1"></div>
+    </div>
+    <div class="column">
+        <div id="pie2"></div>
+    </div>
+</div>
+
+
+<script>
+    var data1 = [{
+        values: [19, 26, 55],
+        labels: ['New', 'Middle', 'Old'],
+        type: 'pie'
+    }];
+    Plotly.newPlot('pie1', data1);
+
+    var data2 = [{
+        values: [20, 50, 30],
+        labels: ['High-school/lower', 'College', 'Higher'],
+        type: 'pie'
+    }];
+    Plotly.newPlot('pie2', data2);
+
+</script>
+</body>
