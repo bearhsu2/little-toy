@@ -1,10 +1,10 @@
 <div class="ui fixed inverted menu" id="header">
     <div class="ui container">
-        <a href="fixed" class="header item">
+        <a href="fixed" class="header item redirector" customValue="home">
             <img class="logo" src="assets/images/logo.jpg">
             Little Toy
         </a>
-        <a href="#" class="item">Home</a>
+        <a href="#" class="item redirector" customValue="home">Home</a>
         <div class="ui simple dropdown item">
             Menu <i class="dropdown icon"></i>
             <div class="menu">
@@ -20,8 +20,19 @@
                         <a class="item" href="#">Link Item</a>
                     </div>
                 </div>
-                <a class="item" href="#">Members</a>
+                <a class="item redirector" href="#" customValue="home">Members</a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $(".redirector").click(function(){
+
+            var customValue = $(this).attr('customValue');
+
+            alert("The item was clicked." + customValue);
+        });
+    });
+</script>
