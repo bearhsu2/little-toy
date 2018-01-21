@@ -10,27 +10,35 @@
     <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main_frame.css">
 
-    <script src="w3data.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
     <script src="semantic/semantic.js"></script>
+
 
 </head>
 <body>
 
-<div id="header" w3-include-html="assets/partial_page/header.html">
-
+<div id="header">
 </div>
 
-<div id="body" w3-include-html="assets/partial_page/home_body.html">
-
+<div id="body">
 </div>
 
-<div id="footer" w3-include-html="assets/partial_page/footer.html">
-
+<div id="footer">
 </div>
 
 
 <script>
-    w3IncludeHTML();
+
+
+    $(document).ready(function(){
+        $('#header').load('assets/partial_page/header.html');
+        $('#body').load('assets/partial_page/home_body.html');
+        $('#footer').load('assets/partial_page/footer.html');
+    });
+
+
+
+
 </script>
 
 
