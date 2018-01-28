@@ -1,20 +1,17 @@
 <div class="ui stackable two column grid">
     <div class="column">
-        <div id="pie1">
-        </div>
-        <div id="pie1Loading" class="ui segment">
-            <div class="ui active dimmer">
-                <div class="ui text loader">Loading</div>
-            </div>
-            <p></p>
+        <div class="ui segment">
+            <div id="pie1"></div>
+            <div id="pie1Loading" class="ui active text loader">Loading</div>
         </div>
     </div>
     <div class="column">
-        <div id="pie2"></div>
+        <div class="ui segment">
+            <div id="pie2"></div>
+            <div id="pie2Loading" class="ui active text loader">Loading</div>
+        </div>
     </div>
 </div>
-
-
 
 
 <script>
@@ -32,17 +29,22 @@
 
     $(document).ready(function(){
         $('#pie1').hide();
+        $('#pie2').hide();
     });
 
     $.getScript( 'https://cdn.plot.ly/plotly-latest.min.js', function( data, textStatus, jqxhr ) {
         $.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js', function( data, textStatus, jqxhr ) {
             Plotly.newPlot('pie1', data1);
-            $('#pie1Loading').hide();
             $('#pie1').show();
+            $("#pie1Loading").removeClass("active");
 
             Plotly.newPlot('pie2', data2);
+            $('#pie2').show();
+            $("#pie2Loading").removeClass("active");
         } );
     } );
+
+
 
 
 </script>
