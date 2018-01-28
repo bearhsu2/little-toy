@@ -8,6 +8,21 @@
         <div class="ui simple dropdown item">
             Menu <i class="dropdown icon"></i>
             <div class="menu">
+                <a id="pieRedirector" class="item redirector" href="#" redirectTo="pie.html">人力分布</a>
+                <a class="item" href="#">Link Item</a>
+                <div class="divider"></div>
+                <div class="header">Header Item</div>
+                <div class="item">
+                    <i class="dropdown icon"></i>
+                    Sub Menu
+                    <div class="menu">
+                        <a class="item" href="#">Link Item</a>
+                        <a class="item" href="#">Link Item</a>
+                    </div>
+                </div>
+                <a class="item redirector" href="#" redirectTo="members.html">Members</a>
+            </div>
+            <div class="menu">
                 <a class="item redirector" href="#" redirectTo="pie.html">人力分布</a>
                 <a class="item" href="#">Link Item</a>
                 <div class="divider"></div>
@@ -23,6 +38,12 @@
                 <a class="item redirector" href="#" redirectTo="members.html">Members</a>
             </div>
         </div>
+        <div class="ui simple dropdown item">
+            Admin <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item redirector" href="#" redirectTo="upload.html">更新資料</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -32,4 +53,7 @@
             $('#body').load('assets/partial_page/body/' + $(this).attr('redirectTo'));
         });
     });
+
+
+
 </script>
